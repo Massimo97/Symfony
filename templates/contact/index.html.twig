@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/contact.css')}}">
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="contact-container">
+
+        <h1>Contact</h1>
+        <div>
+            <button style="background-color: #84947b;padding:10px" id="sendMail">Contactez nous ! Cliquer ici</button>
+            <script>
+                let btn = document.getElementById("sendMail");
+                btn.addEventListener("click", () => {
+                    window.open('mailto:gusto.cuisto@example.com');
+                })
+            </script>
+        </div>
+    </div>
+
+{% endblock %}

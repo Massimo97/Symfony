@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/adminrecetteedit.css')}}">
+{% endblock %}
+
+{% block title %}Admin Recettes Edit{% endblock %}
+
+{% block body %}
+
+    <h1>Administration</h1>
+
+    <div class="options">
+        <a href="{{ path('app_admin_recettes') }}">Retourner</a>
+    </div>
+
+    
+    {{ form_start(form) }}
+
+    {{ include('user/recettes/_form.html.twig') }}
+
+    {{ form_end(form) }}
+   
+{% endblock %}

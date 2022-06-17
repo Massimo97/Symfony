@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/recettedetail.css')}}">
+{% endblock %}
+
+{% block title %}Recette Detail
+{% endblock %}
+
+{% block body %}
+
+
+	{{ include('/recette/display.html.twig') }}
+
+	{% if app.user %}
+		{{ include('/comment/new.html.twig') }}
+	{% endif %}
+
+
+	{{ include('/recette/recettesrecentes.html.twig') }}
+{% endblock %}

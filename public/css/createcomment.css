@@ -1,0 +1,37 @@
+.comment-form {
+    width: 61%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.comment-form p {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 98%;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+}
+
+#comment {
+    height: 100px;
+}
+
+.comment-form button {
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 35%;
+    padding: 8px 0;
+    color: #fff;
+    background-color: #84947b;
+}
+
+.comment-form button:hover {
+    background-color: #84947b90;
+}
+

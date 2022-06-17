@@ -1,0 +1,63 @@
+.edit-form {
+    width: 50%;
+    height: 250px;
+    margin-left: 25%;
+    background-color: #e8ece6;
+}
+
+.edit-form p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #84947b;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+#recetteTitle {
+    padding-top: 20px;
+}
+
+#post_title {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 50px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    background: #f1f4f0dd;
+    color: rgb(52, 49, 49);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+}
+
+#post_title:focus {
+    outline: none !important;
+    border:1px solid #fff;
+    box-shadow: 0 0 10px #ecf3e8ae;
+   
+}
+
+#post_category {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+#post_category:focus {
+    outline: none !important;
+    border: 1px solid #ecf3e8ae;
+    box-shadow: 0 0 10px #ecf3e8ae;
+}
+
+#post_save {
+    width: 100px;
+    margin-left: 47%;
+    background-color: #84947b;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 6px 5px;
+}

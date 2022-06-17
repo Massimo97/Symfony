@@ -1,0 +1,51 @@
+.contact-container {
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 60px;
+
+}
+
+.contact-container h1 {
+    color: #84947b;
+    letter-spacing: 1.5px;
+    font-size: 28px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-container form label {
+    color: #84947b;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-container form input, #contact_text {
+    display: block;
+    width: 98%;
+    border: 1px solid #84947b;
+}
+
+/*.contact-container form textarea {
+    resize: none;
+}*/
+
+#contact_save {
+    display: block;
+    width: 100px;
+    margin: auto;
+    padding: 6px 8px;
+    background-color: #84947b;
+    color: #fff;
+    margin-top: -20px;
+
+    cursor: pointer;
+}

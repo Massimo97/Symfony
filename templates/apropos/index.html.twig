@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Apropos{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/apropos.css')}}">
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="apropos-container">
+        <img src="{{asset('images/profil.jpg')}}">
+
+        <div class="infos">
+            <h2>Bonjour</h2>
+
+            <hr>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget tempor dolor. Integer ipsum lectus, 
+                finibus nec sapien id, vehicula scelerisque justo. Sed tempor tincidunt neque, et mollis mi. 
+                Mauris consectetur nisl mauris, a venenatis magna varius vel. Ut eu nisl aliquet, cursus sapien scelerisque, 
+                porta erat. Phasellus rutrum nulla sit amet ex efficitur efficitur. Nunc enim felis, malesuada non arcu ac, 
+                fringilla pellentesque leo. Duis vel semper eros. Aenean sed elit quis erat vulputate commodo eu a felis. 
+                In in pellentesque justo. Fusce tempor ipsum diam, quis rhoncus nisl bibendum ut. Morbi eget magna vulputate,
+                condimentum tellus id, mollis felis. Aenean congue erat eget nisl egestas.</p>
+        </div>
+    </div>
+
+{% endblock %}

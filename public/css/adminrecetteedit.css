@@ -1,0 +1,27 @@
+h1 {
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #84947b;
+    margin: auto;
+    margin-top: 20px;
+  
+}
+
+.options {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.options a {
+    display: inline-block;
+    padding: 8px 6px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #84947b;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}

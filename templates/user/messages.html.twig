@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/adminmessages.css')}}">
+{% endblock %}
+
+{% block title %}Admin Contact Messages{% endblock %}
+
+{% block body %}
+    <h1 id="title">Liste des messages recus</h1>
+
+    <a id="retourlink" href="{{ path('app_admin_messages') }}">Retour</a>
+
+    <table>
+
+        <tr>
+          <th>Id</th>
+          <th>Email</th>
+          <th>Message</th>
+        </tr>
+    
+        {% for message in adminmessages %}
+            <tr>
+                <td>{{ message.id }}</td>
+                <td>{{ message.mail }}</td>
+                <td>{{ message.text }}</td>
+            </tr>
+        {% endfor %}
+
+      </table>
+{% endblock %}

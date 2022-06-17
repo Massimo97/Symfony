@@ -1,0 +1,27 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/adminrecetteform.css')}}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="edit-form">
+        <p id="recetteTitle">Recette Titre: </p><br>
+        <div class="form-group">
+            {{ form_widget(form.title) }}
+        </div>
+
+        <p>Recette Category: </p><br>
+        <div class="form-group">
+            {{ form_widget(form.category) }}
+        </div>
+    </div>
+    
+{% endblock %}
+
+
+
+
+
+
+    
+   

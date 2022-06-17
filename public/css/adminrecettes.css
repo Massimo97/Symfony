@@ -1,0 +1,85 @@
+h1 {
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #84947b;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.options {
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.options a {
+    display: inline-block;
+    padding: 8px 6px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #84947b;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/**************************************************/
+#recettes-table {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#recettes-table td, #recettes-table th {
+    border: 1px solid #84947b;
+    padding: 6px;
+    text-align: center;
+}
+
+#recettes-table tr:nth-child(odd){background-color: #eaf1e6;}
+
+#recettes-table tr:hover {background-color: rgb(245, 239, 239);}
+
+#recettes-table th {
+    text-align: left;
+    background-color: #d8ebcd;
+    color: #84947b;
+    font-weight: 350;
+    text-align: center;
+}
+
+#edit {
+    display: inline-block;
+    padding: 5px 5px;
+    background-color: #afc3a3;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+#edit:hover {
+    background-color: #607e4e;
+}
+
+#delete {
+    display: inline-block;
+    padding: 5px 5px;
+    background-color: #eda98c;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+#delete:hover {
+    background-color: #e97644;
+}

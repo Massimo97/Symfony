@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Comment{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/recettedetail.css')}}">
+{% endblock %}
+
+{% block body %}
+
+    {{ include('/recette/display.html.twig') }}
+
+{% endblock %}

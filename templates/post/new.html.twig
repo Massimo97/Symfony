@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Post{% endblock %}
+
+{% block body %}
+<main class="w-full min-h-full">
+    <div class="w-1/2 flex flex-col mx-auto gap-y-5 py-4">
+        <a class="py-3 px-6 w-full nm-flat-green-50 rounded-md text-2xl font-roboto flex flex-row items-center" href="{{ path('app_recettes') }}">
+            <span class="iconify block" data-icon="fontisto:arrow-return-left"></span>
+            <span class="block">Retour à la liste</span>
+        </a>
+        {{ include('post/_form.html.twig') }}
+    </div>
+</main>
+{% endblock %}

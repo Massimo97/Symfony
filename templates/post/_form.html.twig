@@ -1,0 +1,15 @@
+{{ form_start(form) }}
+<div class="flex flex-col flex-nowrap justify-around w-full">
+    <div class="flex flex-col justify-between gap-y-5 mx-auto w-full p-3 nm-flat-green-50 rounded-xl">
+        {% if formTitle %}
+        <h3 class="text-5xl font-roboto text-center font-light">{{formTitle}}</h3>
+        {% endif %}
+        {{form_widget(form.title)}}
+        {{form_widget(form.text)}}
+        <div class="flex flex-row justify-between">
+        {{form_widget(form.category)}}
+        {{form_widget(form.save)}}
+        </div>
+    </div>
+</div>
+{{ form_end(form) }}

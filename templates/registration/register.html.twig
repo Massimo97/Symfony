@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% for flash_error in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+    {{ form_start(form) }}
+    <div class="font-playfair flex flex-col flex-nowrap justify-around">
+        <div class="flex flex-col mx-auto w-100 p-3 nm-flat-green-50 space-y-8 rounded-xl">
+            <h1 class="text-5xl font-roboto text-center">S'inscrire</h1>
+            <div id="form" class="flex flex-col justify-around space-y-5">
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{form_widget(form.username)}}
+                </div>
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{form_widget(form.email)}}
+                </div>
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{form_widget(form.firstname)}}
+                    {{form_widget(form.lastname)}}
+                </div>
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{ form_widget(form.password) }}
+                    {{ form_widget(form.passwordConf) }}
+                </div>
+                <div class="flex flex-col flex-wrap justify-around space-y-5">
+                    <div class="flex flex-row flex-nowrap w-full justify-around">
+                        <p class="inline-block align-middle nm-convex-green-200 rounded-full w-9/20 h-max font-extrabold p-2 duration-500">Accepter les CGU {{ form_widget(form.agreeTerms) }}</p>
+                        {{form_widget(form.save)}}
+                    </div>
+                    <p class="text-center">Déjà un compte ? <a class="text-green-400" href="{{ path('app_login') }}">Connexion</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

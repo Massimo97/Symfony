@@ -1,0 +1,18 @@
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/createcomment.css')}}">
+{% endblock %}
+
+{% if form is defined %}
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+        <div class="comment">
+            {{ form_widget(form.text) }}
+        </div>
+
+        <a href="">Envoyer</a>
+        
+        {#<a href="">{{ button_label|default('Envoyer') }}</a>#}
+    {{ form_end(form) }}
+{% endif %}

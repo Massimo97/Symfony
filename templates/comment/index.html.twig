@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Comments{% endblock %}
+
+{% block body %}
+    
+        {% for comment in comments %}
+            <p>{{ comment.id }}</p>
+            <p>{{ comment.text }}</p>
+            <p>{{ comment.createat ? comment.createat|date('Y-m-d') : '' }}</p>
+           
+            {#<a href="{{ path('app_comment_show', {'id': comment.id}) }}">show</a>
+            <a href="{{ path('app_comment_edit', {'id': comment.id}) }}">edit</a>#}
+        {% else %}
+            
+            <p>no records found</p>
+            
+        {% endfor %}
+      
+
+    {#<a href="{{ path('app_comment_new') }}">Create new</a>#}
+{% endblock %}

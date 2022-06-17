@@ -1,0 +1,33 @@
+
+
+{{ form_start(form) }}
+    <div class="font-playfair flex flex-col flex-nowrap justify-around h-screen">
+        <div class="flex flex-col mx-auto w-100 p-3 nm-flat-gray-200-lg space-y-8 rounded-xl">
+            <a class="font-bold" href="{{ path('app_user_index') }}">Retour à l'accueil</a>
+            <h1 class="text-5xl font-roboto text-center">S'inscrire</h1>
+            <div id="form" class="flex flex-col justify-around space-y-5">
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{form_widget(form.username)}}
+                </div>
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{form_widget(form.email)}}
+                </div>
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{form_widget(form.firstname)}}
+                    {{form_widget(form.lastname)}}
+                </div>
+                <div class="flex flex-row flex-nowrap justify-around">
+                    {{ form_widget(form.password) }}
+                    {{ form_widget(form.passwordConf) }}
+                </div>
+                <div class="flex flex-col flex-wrap justify-around space-y-5">
+                    <div class="flex flex-row flex-nowrap w-full justify-around">
+                        <p class="inline-block align-middle nm-convex-gray-200 rounded-full w-9/20 h-max font-extrabold p-2 duration-500">Accepter les CGU {{ form_widget(form.agreeTerms) }}</p>
+                        {{form_widget(form.save)}}
+                    </div>
+                    <a class="nm-convex-gray-200 rounded-full py-2 px-4 w-full font-extrabold text-center" href="{{ path('app_user_index') }}">Se connecter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}

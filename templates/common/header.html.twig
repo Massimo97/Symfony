@@ -1,0 +1,39 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/header.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<div class="nav-bar">
+    <ul>
+        <li><a href="{{ path('app_home') }}">ACCUEIL</a></li>
+        <li><a href="{{ path('app_recettes') }}">RECETTES</a></li>
+        <li><a href="{{ path('app_apropos') }}">A PROPOS</a></li>
+        <li><a href="{{ path('app_contact') }}">CONTACT</a></li>
+        {% if app.user %}
+            <li>
+                <a href="{{ path('app_logout') }}">DECONNEXION</a>
+            </li>
+            {% if is_granted("ROLE_ADMIN") %}
+            <li>
+                <a href="{{ path('app_home') }}">ADMINISTRATION</a>
+            </li>
+            {% endif %}
+        {% else %}
+            <li>
+                <a href="{{ path('app_login') }}">CONNEXION / INSCRIPTION</a>
+            </li>
+        {% endif %}
+        </ul>
+
+    </div>
+
+    <div class="header">
+        <img src="{{asset('images/logo.png')}}" alt="">
+        <h1>AVENTURES GUSTATIVES</h1>
+
+        <hr>
+    </div>
+</header>
+   
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+    
+    <div class="font-playfair flex flex-col flex-nowrap justify-around">
+        <div class="flex flex-col mx-auto w-96 p-3 nm-flat-green-50 space-y-8 rounded-xl">
+            <h1 class="text-5xl font-roboto text-center font-light">Connexion</h1>
+            <div class="flex flex-col justify-around space-y-5">
+                <div class="flex flex-row flex-nowrap justify-around">
+                    <input type="email" name="email" id="inputEmail" class="nm-inset-green-50 rounded-full py-2 px-4 w-9/20" placeholder="Email" value="{{ last_username }}">
+                    <input type="password" name="password" id="inputPassword" class="nm-inset-green-50 rounded-full py-2 px-4 w-9/20" placeholder="Password" autocomplete="current-password" required >
+                </div>
+                <div class="flex flex-row flex-wrap justify-around space-y-5">
+                    <button type="submit" class="nm-convex-green-400-sm rounded-full py-2 px-4 w-full font-bold text-white">Connexion</button>
+                    <p>Pas encore de compte ? <a class="text-green-400" href="{{ path('app_register') }}">Créer un Compte</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+.footer-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100px;
+
+    
+    background-color: #f8f9f7;
+}
+
+.footer-container p {
+    letter-spacing: 2px;
+    color: #84947b;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-icons-footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icons-footer li {
+    list-style: none;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+svg {
+    width: 30px;
+    fill: #2f2e2e;
+}

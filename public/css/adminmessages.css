@@ -1,0 +1,40 @@
+table {
+    color: #2f2e2e;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+    margin-top: -20px;
+}
+
+th, td {
+    border: 1px solid #84947b;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #e5eee0;
+}
+
+#retourlink {
+    width: 80px;
+    display: inline-block;
+    margin: auto;
+    margin-top: -20px;
+    padding: 6px 6px;
+    background-color:#84947b;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#title {
+    margin: auto;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #84947b;
+
+}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/adminrecettes.css')}}">
+{% endblock %}
+
+{% block title %}Admin Recettes{% endblock %}
+
+{% block body %}
+
+    <h1>Administration</h1>
+
+    <div class="options">
+        <a href="">Ajouter un article</a>
+
+        <a href="">Contact</a>
+    </div>
+
+    <table id="recettes-table">
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+        
+        {% for adminrecette in adminrecettes %}
+            <tr>
+                <td>{{adminrecette.id}}</td>
+                <td>{{adminrecette.title}}</td>
+                <td>{{adminrecette.category.name}}</td>
+                <td>
+                    <a id="edit" href="{{ path('app_recette_edit', {'id': adminrecette.id}) }}">Modifier</a>
+                    <a id="delete" href="{{ path('app_recette_delete', {'id': adminrecette.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

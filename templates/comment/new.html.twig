@@ -1,0 +1,37 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/createcomment.css')}}">
+{% endblock %}
+{% block javascripts %}
+    <script defer>
+        setTimeout(()=>{
+            let resets = document.querySelectorAll(".reset");
+            for(input of resets){
+                input.value = "";
+            }
+        }, 500);
+    </script>
+{% endblock javascripts %}
+
+{% block body %}
+
+    <div class="comment-form">
+
+        <p>Laisser un commentaire</p>
+
+            {{ form_start(form) }}
+
+                <div class="comment">
+                {{ form_widget(form.text) }}
+                </div>
+
+                <button>
+                    <a href="{{ path('app_recette_detail', { 'id' : post.id }) }}" data-entity-id={{post.id}}>Envoyer</a>
+                </button>
+               
+            {#<a href="">{{ button_label|default('Envoyer') }}</a>#}
+           {{ form_end(form) }}
+
+    </div>
+
+    {#<a href="{{ path('app_comment_index') }}">back to list</a>#}
+{% endblock %}
